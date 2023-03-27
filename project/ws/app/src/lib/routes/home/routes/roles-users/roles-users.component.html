@@ -1,0 +1,19 @@
+<div class="flex flex-4 flex-column mt-5">
+  <mat-card class="flex-custom">
+    <mat-card-header class="flex-custom-m margin-bottom-l" id="rolescs">
+      <div class="flex-1" role="link" tabindex="1">
+        <div class="flex flex-1">
+          <ws-widget-breadcrumbs-org [widgetData]="breadcrumbs">
+          </ws-widget-breadcrumbs-org>
+        </div>
+      </div>
+    </mat-card-header>
+    <mat-card-content>
+      <ng-container>
+        <ws-widget-ui-user-table [hidden]="currentTab==='rolesandaccess'" [tableData]="tabledata" [data]="data"
+          [otherInput]="createdDepartment" [needAddAdmin]="false" [needCreateUser]="false" (searchByEnterKey)="onEnterkySearch($event)">
+        </ws-widget-ui-user-table>
+      </ng-container>
+    </mat-card-content>
+  </mat-card>
+</div>

@@ -1,0 +1,65 @@
+@import 'ws-common';
+@import 'ws-vars';
+@import 'ws-mixins';
+
+.container-balanced {
+  @extend %page-center;
+  height: auto;
+  min-height: calc(100vh - 120px);
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.container2 {
+  position: relative;
+}
+
+.container-balanced-banner {
+  @extend %page-center;
+  height: auto;
+}
+.left-menu-bread{
+  margin-left: -400px;
+}
+.left-nav {
+  min-width: 240px;
+  max-width: 240px;
+
+
+
+  @include breakpoint-xs {
+    min-width: 100%;
+    max-width: none;
+  }
+}
+
+.flex-3 {
+  flex: 3;
+}
+
+.flex-5 {
+  flex: 5;
+}
+
+
+
+.flex-update {
+  flex-direction: row;
+
+  @include breakpoint-xs {
+    flex-direction: column;
+  }
+
+  @include breakpoint-s {
+    flex-direction: column;
+  }
+}
+
+::ng-deep.mat-progress-spinner {
+    display: block;
+    position: fixed!important;
+    top: 0;
+    margin-top: 20%;
+    left: 0;
+    margin-left: 45%;
+}
